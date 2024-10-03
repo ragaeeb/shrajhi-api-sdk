@@ -24,45 +24,15 @@ pnpm i shrajhi-api-sdk
 import { getLessons } from 'shrajhi-api-sdk';
 ```
 
-### Get Book Information
+### Get Lessons Information
 
 Retrieve metadata about a specific book.
 
 ```javascript
 (async () => {
     try {
-        const bookInfo = await getBookInfo(123);
-        console.log(bookInfo);
-    } catch (error) {
-        console.error(error.message);
-    }
-})();
-```
-
-### Get Book Contents
-
-Fetch the contents of a book, including chapters and sections.
-
-```javascript
-(async () => {
-    try {
-        const bookContents = await getBookContents(123);
-        console.log(bookContents);
-    } catch (error) {
-        console.error(error.message);
-    }
-})();
-```
-
-### Download Book
-
-Download a book's data to a local file.
-
-```javascript
-(async () => {
-    try {
-        const outputFilePath = await downloadBook(123, './book.json');
-        console.log(`Book downloaded to ${outputFilePath}`);
+        const lessons = await getLessons({ limit: 2, page: 1 });
+        console.log(lessons); // [{id: 1, body: 'B', title: 'Title', updatedAt: 1234566}]
     } catch (error) {
         console.error(error.message);
     }
