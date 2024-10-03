@@ -2,7 +2,7 @@
 
 # shrajhi-api-sdk
 
-SDK to access ketabonline.com APIs.
+SDK to access `shrajhi.com.sa` APIs.
 
 ## Installation
 
@@ -21,7 +21,7 @@ pnpm i shrajhi-api-sdk
 ### Importing the SDK
 
 ```javascript
-import { getBookInfo, getBookContents, downloadBook } from 'shrajhi-api-sdk';
+import { getLessons } from 'shrajhi-api-sdk';
 ```
 
 ### Get Book Information
